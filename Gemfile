@@ -2,6 +2,7 @@ source "https://rubygems.org"
 
 gem "rails", "~> 5.0.0", ">= 5.0.0.1"
 gem "bootstrap-sass", "3.3.6"
+gem "bcrypt", "3.1.11"
 gem "puma", "~> 3.0"
 gem "sass-rails", "~> 5.0"
 gem "uglifier", ">= 1.3.0"
@@ -13,6 +14,10 @@ gem "jbuilder", "~> 2.5"
 group :development, :test do
   gem "sqlite3"
   gem "byebug", platform: :mri
+  gem "rspec-rails", "~> 3.0.0"
+  gem "factory_girl_rails"
+  gem "capybara"
+  gem "database_cleaner"
 end
 
 group :development do
