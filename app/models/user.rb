@@ -19,6 +19,10 @@ class User < ApplicationRecord
 
   enum gender: [:male, :female]
 
+<<<<<<< HEAD
   ATTRIBUTES_PARAMS = [:name, :gender, :date_of_birth,:email,
     :password, :password_confirmation]
+=======
+  ATTRIBUTES_PARAMS = :name, :gender, :date_of_birth,:email, :password, :password_confirmation
+>>>>>>> gem devise
 end
