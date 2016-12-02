@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161202014457) do
+ActiveRecord::Schema.define(version: 20161202033534) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "user_id"
@@ -122,12 +122,13 @@ ActiveRecord::Schema.define(version: 20161202014457) do
     t.string   "name"
     t.integer  "gender"
     t.date     "date_of_birth"
-    t.string   "email"
-    t.string   "password_digest"
-    t.string   "remember_digest"
-    t.boolean  "is_admin",        default: false
-    t.datetime "created_at",                      null: false
-    t.datetime "updated_at",                      null: false
+    t.boolean  "is_admin",            default: false
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+    t.string   "email",               default: "",    null: false
+    t.string   "encrypted_password",  default: "",    null: false
+    t.datetime "remember_created_at"
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
 end
