@@ -24,4 +24,8 @@ class User < ApplicationRecord
     :password, :password_confirmation]
 
   scope :all_customer, ->{where is_admin: false}
+
+  def current_user? user
+    self == user
+  end
 end
