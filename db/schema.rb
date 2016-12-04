@@ -50,9 +50,11 @@ ActiveRecord::Schema.define(version: 20161202033534) do
     t.integer  "gender"
     t.date     "date_of_birth"
     t.integer  "type_of_music"
-    t.string   "type"
+    t.integer  "artist_type"
+    t.datetime "deleted_at"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+    t.index ["deleted_at"], name: "index_artists_on_deleted_at"
   end
 
   create_table "categories", force: :cascade do |t|
