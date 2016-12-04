@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  acts_as_paranoid
   has_many :comments, as: :commentable, dependent: :destroy
   has_many :ratings, as: :ratable, dependent: :destroy
   has_many :albums, dependent: :destroy
@@ -19,10 +20,8 @@ class User < ApplicationRecord
 
   enum gender: [:male, :female]
 
-<<<<<<< HEAD
   ATTRIBUTES_PARAMS = [:name, :gender, :date_of_birth,:email,
     :password, :password_confirmation]
-=======
-  ATTRIBUTES_PARAMS = :name, :gender, :date_of_birth,:email, :password, :password_confirmation
->>>>>>> gem devise
+
+  scope :all_customer, ->{where is_admin: false}
 end
