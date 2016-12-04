@@ -58,7 +58,9 @@ en:
         action: "Action"
         delete: "Delete"
         confirm: "Are you sure ?"
-
+      search_form:
+        search: "Search :"
+        placeholder: "Search name or email..."
   controllers:
     admin:
       users:
