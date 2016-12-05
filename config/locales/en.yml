@@ -46,3 +46,24 @@ en:
     about:
       title: "About"
       content: "About page"
+  admin:
+    users:
+      index:
+        title: "Manage users"
+        heading: "Manage users"
+        name: "Name"
+        gender: "Gender"
+        date_of_birth: "Date of birth"
+        email: email
+        action: "Action"
+        delete: "Delete"
+        confirm: "Are you sure ?"
+
+  controllers:
+    admin:
+      users:
+        destroy:
+          flash_success: "Delete success"
+          flash_error: "Delete fail"
+    application:
+      flash_error: "Record not found"

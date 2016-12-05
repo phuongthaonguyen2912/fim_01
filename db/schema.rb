@@ -123,11 +123,13 @@ ActiveRecord::Schema.define(version: 20161202033534) do
     t.integer  "gender"
     t.date     "date_of_birth"
     t.boolean  "is_admin",            default: false
+    t.datetime "deleted_at"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
     t.string   "email",               default: "",    null: false
     t.string   "encrypted_password",  default: "",    null: false
     t.datetime "remember_created_at"
+    t.index ["deleted_at"], name: "index_users_on_deleted_at"
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
