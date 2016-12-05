@@ -1,16 +1,13 @@
 <div class="row omb_login"> 
   <h3 class="omb_authTitle"><%= t ".heading" %></h3> 
   <div class="row omb_row-sm-offset-3 omb_socialButtons"> 
-    <div class="col-xs-4 col-sm-2">  
-      <%= link_to t(".link_facebook"), "#",
+    <div class="col-xs-6 col-sm-3">  
+      <%= link_to t(".link_facebook"), user_facebook_omniauth_authorize_path,
         class: "btn btn-lg btn-block omb_btn-facebook" %>
-    </div> 
-    <div class="col-xs-4 col-sm-2"> 
-      <%= link_to t(".link_twitter"), "#",
-        class: "btn btn-lg btn-block omb_btn-twitter" %>
     </div>  
-    <div class="col-xs-4 col-sm-2"> 
-      <%= link_to t(".link_google"), "#",
+    <div class="col-xs-6 col-sm-3"> 
+      <%= link_to t(".link_google"),
+        user_google_oauth2_omniauth_authorize_path,
         class: "btn btn-lg btn-block omb_btn-google" %>
     </div>  
   </div> 
