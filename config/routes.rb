@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   namespace :admin do
     resources :users, only: [:index, :destroy]
   end
+
+  resources :users, only: :show
 end
