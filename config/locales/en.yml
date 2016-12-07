@@ -67,6 +67,12 @@ en:
     about:
       title: "About"
       content: "About page"
+      btn_text: "Send"
+  lyrics:
+    index:
+      prev: "<"
+      next: ">"
+      btn_text: "Send"
   admin:
     users:
       index:
@@ -124,6 +130,15 @@ en:
       category_form:
         blank: "---None---"
         submit: "Save"
+    lyrics:
+      index:
+        title: "Manage lyrics"
+        heading: "Manage lyrics"
+        content: "Content"
+        user_contribute: "User contribute"
+        song: "Song"
+        status: "Status"
+        read-more: "read more"
   flash:
     artists_destroy_success: "Deleted successfully"
     artists_destroy_failed: "Delete failed"
@@ -151,6 +166,19 @@ en:
           flash: "This artist does not exist"
     application:
       flash_error: "Record not found"
+    lyrics:
+      find_song:
+        flash: "Song not found"
+    songs:
+      find_song:
+        flash: "Song not found"
+
+  helpers:
+    admin:
+      lyrics:
+        waitting: "waiting"
+        approve: "approve"
+        deny: "deny"
   users:
     show:
       heading: "Your Profile"

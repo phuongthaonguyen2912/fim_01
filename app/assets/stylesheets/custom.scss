@@ -171,3 +171,20 @@ footer {
   margin-left: 20px;
   width: 300px;
 }
+
+/* lyrics */
+.pull-right .btn-success {
+  color: gray;
+  background-color: #fff;
+  border-color: #fff;
+}
+
+.pull-right .btn-success:hover {
+  color: black;
+  background-color: #fff;
+  border-color: #fff;
+}
+.lyric-content{
+  overflow: scroll;
+  width: 550px;
+}

@@ -1,0 +1,27 @@
+<% provide :title, t(".title") %>
+<h1><%= t ".heading" %></h1>
+<table class="table table-hover">
+  <tr>
+    <th><%= t ".content" %></th>
+    <th><%= t ".user_contribute" %></th>
+    <th><%= t ".song" %></th>
+    <th><%= t ".status" %></th>
+  </tr>
+  <% @lyrics.each_with_index do |lyric, index| %>
+    <tr>
+      <td class="lyric-content">
+        <% if lyric.content.size >= Settings.lyrics.max_char %>
+          <%= lyric.content[Settings.lyrics.zero..Settings.lyrics.max_char] %>
+          <span>.....</span>
+          <%= link_to t("read-more"),
+            admin_lyrics_path(lyric),class: "btn btn-link" %>
+        <% else %>
+          <p><%= lyric.content %></p>
+        <% end %>
+      </td>
+      <td><%= lyric.user.name %></td>
+      <td><%= lyric.song.name %></td>
+      <td><%= status_field lyric.status %></td>
+    </tr>
+  <% end %>
+</table>

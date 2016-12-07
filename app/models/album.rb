@@ -8,4 +8,5 @@ class Album < ApplicationRecord
   belongs_to :user
 
   accepts_nested_attributes_for :songs
+  enum album_type: [:album, :favourite]
 end

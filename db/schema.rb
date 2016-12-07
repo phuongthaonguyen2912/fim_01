@@ -79,10 +79,10 @@ ActiveRecord::Schema.define(version: 20161202033534) do
     t.integer  "user_id"
     t.integer  "song_id"
     t.text     "content"
-    t.integer  "status"
+    t.integer  "status",      default: 0
     t.integer  "approved_by"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
   end
 
   create_table "ratings", force: :cascade do |t|

@@ -4,7 +4,7 @@ class CreateLyrics < ActiveRecord::Migration[5.0]
       t.integer :user_id
       t.integer :song_id
       t.text :content
-      t.integer :status
+      t.integer :status, default: 0
       t.integer :approved_by
 
       t.timestamps

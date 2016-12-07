@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="row">
+      <div class="col-md-7">
+        <div class="controls pull-right hidden-xs">
+          <a class="left fa fa-chevron-left btn btn-success"
+            href="#carousel-example" data-slide="prev"><%= t ".prev" %></a>
+          <a class="right fa fa-chevron-right btn btn-success"
+            href="#carousel-example" data-slide="next"><%= t ".next" %></a>
+        </div>
+      </div>
+    </div>
+    <div id="carousel-example" class="carousel hidden-xs"
+      data-ride="carousel" data-interval="false">
+      <div class="carousel-inner">
+        <% @lyrics.each_with_index do |lyric, index| %>
+          <div class="item <%= 'active' if index == 0 %>">
+            <div>Lyric : <%= index + 1 %>/ <%= @lyrics.count %></div>
+            <div class="col-sm-7"><p><%= lyric.content %></p></div>
+          </div>
+        <% end %>      
+      </div>
+    </div>
+  </div>
+  <div class="request-lyric">
+    <%= link_to "Request lyric", "#add-lyric", "data-toggle": "collapse" %>
+  </div>
+  <div id="add-lyric" class="collapse">
+    <div class="col-md-6 col-md-offset-3"> 
+      <%= form_for [@song, @lyric] do |f| %> 
+        <div class="form-group"> 
+          <%= f.label :content %><br/> 
+          <%= f.text_area :content, cols: 10, rows: 15,
+            class: "form-control" %> 
+        </div> 
+        <div class="form-group"> 
+          <%= f.submit t(".btn_text"),
+            class: "btn btn-lg btn-primary btn-block" %> 
+        </div> 
+      <% end %> 
+    </div> 
+  </div> 
+</div>
