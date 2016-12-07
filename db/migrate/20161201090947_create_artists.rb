@@ -5,9 +5,11 @@ class CreateArtists < ActiveRecord::Migration[5.0]
       t.integer :gender
       t.date :date_of_birth
       t.integer :type_of_music
-      t.string :type
+      t.integer :artist_type
+      t.datetime :deleted_at
 
       t.timestamps
     end
+    add_index :artists, :deleted_at
   end
 end
