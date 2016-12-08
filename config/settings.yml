@@ -2,3 +2,5 @@ users:
   order_per_page: 10
 artists:
   order_per_page: 20
+categories:
+  per_page: 10

@@ -100,6 +100,30 @@ en:
       search_form:
         search: "Search :"
         placeholder: "Search name..."
+    categories:
+      search_form:
+        search: "Search :"
+        placeholder: "Search name..."
+      new:
+        title: "Create category"
+        heading: "Add New Category"
+        submit: "Submit"
+      edit:
+        title: "Edit Category"
+        heading: "Edit Category"
+      index:
+        title: "Manage category"
+        heading: "Manage Category"
+        stt: "STT"
+        name: "Name"
+        parent_category: "Parent Category"
+        add: "Add category"
+        edit: "Edit"
+        delete: "Delete"
+        confirm: "Are you sure ?"
+      category_form:
+        blank: "---None---"
+        submit: "Save"
   flash:
     artists_destroy_success: "Deleted successfully"
     artists_destroy_failed: "Delete failed"
@@ -108,6 +132,14 @@ en:
     artists_update_success: "Updated successfully"
     artists_update_failed: "Update failed"
     artist_not_found: "This artist does not exist"
+    destroy_success: "Deleted successfully"
+    destroy_failed: "Delete failed"
+    create_success: "Created successfully"
+    create_failed: "Create failed"
+    update_success: "Updated successfully"
+    update_failed: "Update failed"
+    not_found: "This artist does not exist"
+
   controllers:
     admin:
       users:
